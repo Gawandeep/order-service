@@ -1,0 +1,19 @@
+spring:
+  config:
+    import: configserver:http://localhost:9191
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true 
+  application:
+    name: Order-Service
+    
+    
+server:
+  port: 9091
+  
