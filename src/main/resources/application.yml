@@ -17,3 +17,8 @@ spring:
 server:
   port: 9091
   
+logging:
+  file:
+    path: C:\Users\gawandeep.singh\eclipse-workspace\paymentService\logs
+    name: C:\Users\gawandeep.singh\eclipse-workspace\paymentService\logs\microservice.log
+  

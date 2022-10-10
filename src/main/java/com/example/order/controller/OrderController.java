@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.order.dto.TransactionRequest;
 import com.example.order.dto.TransactionResponse;
 import com.example.order.service.OrderService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 
 @RestController
@@ -18,7 +19,7 @@ public class OrderController {
 	private OrderService orderService;
 	
 	@PostMapping("/saveOrder")
-	public TransactionResponse saveOrder(@RequestBody TransactionRequest transactionRequest) {
+	public TransactionResponse saveOrder(@RequestBody TransactionRequest transactionRequest) throws JsonProcessingException {
 		return orderService.saveOrder(transactionRequest);
 	}
 	
